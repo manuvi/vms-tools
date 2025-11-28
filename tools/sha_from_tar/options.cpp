@@ -16,15 +16,15 @@ namespace fs = std::filesystem;
 
 void OptionsParser::print_usage(std::ostream& os) const {
   os << "sha-from-tar — by Manuel Virgilio" << std::endl;
-  os << "Compute the SHA-256 of every file contained in tar archives without extracting them." << std::endl;
+  os << "Compute SHA-256 for files inside tar archives without extracting them." << std::endl;
   os << "Usage:" << std::endl;
-  os << "  sha_from_tar [-f <archive> | -C <dir>] [-s] [-h]" << std::endl;
+  os << "  sha_from_tar [-f <archive> | -C <dir>] [-O <dir>] [-s] [-h]" << std::endl;
   os << "Options:" << std::endl;
-  os << "  -f <archive> Specify a single .tar archive to scan\n";
-  os << "  -C <dir>     Search for .tar archives in <dir> (defaults to current directory)" << std::endl;
-  os << "  -O <dir>     Specify the directory to place sha files" << std::endl;
-  os << "  -s           Sort file entries alphabetically within each archive" << std::endl;
-  os << "  -h, --help   Show this help message" << std::endl;
+  os << "  -f <archive>  Scan a single .tar archive" << std::endl;
+  os << "  -C <dir>      Search for .tar archives in <dir> (default: current directory)" << std::endl;
+  os << "  -O <dir>      Directory where .sha256 logs are written (default: search dir)" << std::endl;
+  os << "  -s            Sort entries alphabetically in each log" << std::endl;
+  os << "  -h, --help    Show this help message" << std::endl;
 }
 
 bool OptionsParser::parse(int argc, char* argv[], Options& out) const {
