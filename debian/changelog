@@ -1,0 +1,6 @@
+vms-tools (0.1-1) unstable; urgency=medium
+
+  * Initial release of the vms-tools Debian source package (includes
+    sha_from_tar).
+
+ -- Manuel Virgilio <real_virgil@yahoo.it>  Fri, 28 Nov 2025 13:26:35 +0100

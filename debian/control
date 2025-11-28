@@ -1,0 +1,15 @@
+Source: vms-tools
+Section: utils
+Priority: optional
+Maintainer: Manuel Virgilio <real_virgil@yahoo.it>
+Build-Depends: debhelper-compat (= 13), cmake, pkg-config, libarchive-dev, libssl-dev
+Standards-Version: 4.5.1
+Rules-Requires-Root: no
+
+Package: vms-tools
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: C++ console tools collection (includes sha_from_tar)
+ Toolkit of small console utilities. Currently ships `sha_from_tar`, which scans tar
+ archives (.tar), hashes regular files with SHA-256, prints a progress bar, and
+ writes a .sha256 log (sortable output).
