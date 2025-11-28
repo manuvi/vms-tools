@@ -10,8 +10,8 @@
 #include <iostream>
 #include <vector>
 
-#include "options.h"
-#include "process.h"
+#include <sha_from_tar/options.h>
+#include <sha_from_tar/process.h>
 
 namespace fs = std::filesystem;
 

@@ -5,7 +5,7 @@
  * See the LICENSE file in the project root for full license information.
  */
 
-#include "process.h"
+#include <sha_from_tar/process.h>
 
 #include <algorithm>
 #include <array>

@@ -5,7 +5,7 @@
  * See the LICENSE file in the project root for full license information.
  */
 
-#include "options.h"
+#include <sha_from_tar/options.h>
 
 #include <filesystem>
 #include <iostream>

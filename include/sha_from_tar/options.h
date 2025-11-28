@@ -25,7 +25,4 @@ class OptionsParser
 public:
   bool parse(int argc, char* argv[], Options& out) const;
   void print_usage(std::ostream& os) const;
-
-private:
-
 };
