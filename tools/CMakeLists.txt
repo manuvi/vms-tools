@@ -1,1 +1,2 @@
 add_subdirectory(sha_from_tar)
+add_subdirectory(sha_from_dir)

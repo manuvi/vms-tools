@@ -36,9 +36,7 @@ namespace
 
   off_t get_file_size(const std::filesystem::path& filePath)
   {
-    struct stat st
-    {
-    };
+    struct stat st;
     if (stat(filePath.c_str(), &st) != 0)
     {
       return -1;
