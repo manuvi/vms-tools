@@ -4,6 +4,9 @@ on:
   push:
   pull_request:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -49,11 +52,14 @@ jobs:
 
         - name: Build .deb package
           run: |
-            # Se usi dpkg-buildpackage:
             dpkg-buildpackage -us -uc
 
-        - name: Upload .deb artifact
-          uses: actions/upload-artifact@v4
+        - name: Move .deb into workspace
+          run: mv ../*.deb .
+
+        - name: Upload .deb to GitHub Release
+          uses: softprops/action-gh-release@v2
           with:
-            name: debian-packages
-            path: ../*.deb
+            files: vms-tools_*.deb
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

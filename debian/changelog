@@ -1,4 +1,4 @@
-vms-tools (0.2.0-1) unstable; urgency=medium
+vms-tools (0.2.0) unstable; urgency=medium
 
   * Add sha_from_dir tool (hashes regular files inside a directory).
 
