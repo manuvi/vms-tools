@@ -1,3 +1,9 @@
+vms-tools (0.2.0-1) unstable; urgency=medium
+
+  * Add sha_from_dir tool (hashes regular files inside a directory).
+
+ -- Manuel Virgilio <real_virgil@yahoo.it>  Sat, 29 Nov 2025 11:30:53 +0100
+
 vms-tools (0.1-1) unstable; urgency=medium
 
   * Initial release of the vms-tools Debian source package (includes

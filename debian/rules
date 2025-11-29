@@ -12,3 +12,6 @@ override_dh_auto_configure:
 override_dh_auto_install:
 	install -D -m 0755 obj-$(DEB_HOST_GNU_TYPE)/bin/sha_from_tar \
 		$(CURDIR)/debian/vms-tools/usr/bin/sha_from_tar
+
+	install -D -m 0755 obj-$(DEB_HOST_GNU_TYPE)/bin/sha_from_dir \
+		$(CURDIR)/debian/vms-tools/usr/bin/sha_from_dir
